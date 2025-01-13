@@ -1,0 +1,25 @@
+{
+  "name": "node-express-users-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cederdorff/node-express-users-mvc.git"
+  },
+  "author": "RACE - Rasmus Cederdorff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cederdorff/node-express-users-mvc/issues"
+  },
+  "homepage": "https://github.com/cederdorff/node-express-users-mvc#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4"
+  }
+}

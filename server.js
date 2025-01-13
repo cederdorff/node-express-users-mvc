@@ -9,22 +9,22 @@ import {
 } from "./controllers/userController.js";
 import mongoose from "mongoose";
 
-// Setup
+// ========== Setup ========== //
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+// ========== Middleware ========== //
 app.use(express.json());
 app.use(cors());
 
-// Routes
-app.get("/users", getUsers);
-app.get("/users/:id", getUser);
-app.post("/users", createUser);
-app.put("/users/:id", updateUser);
-app.delete("/users/:id", deleteUser);
+// ========== Routes ========== //
+app.get("/users", getUsers); // Get all users
+app.get("/users/:id", getUser); // Get a single user
+app.post("/users", createUser); // Create a new user
+app.put("/users/:id", updateUser); // Update a user
+app.delete("/users/:id", deleteUser); // Delete a user
 
-// Start server
+// ========== Start server ========== //
 async function startServer() {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
